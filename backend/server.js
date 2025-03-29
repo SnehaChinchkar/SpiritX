@@ -10,23 +10,24 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
-app.use(bodyParser.json());
-app.use(express.json());
-app.use(cookieParser());
+// app.use(bodyParser.json());
+
 app.use(
     cors({
-        origin: process.env.FRONTEND_URL,
-        credentials: true,
+      origin: process.env.FRONTEND_URL, 
+      credentials: true, 
+      methods: "GET,POST,PUT,DELETE",
+      allowedHeaders: "Content-Type,Authorization",
     })
-);
+  );
+app.options("*", cors());
 
 app.get('/', (req, res) => {
     res.json({ message: "Welcome to the Home Page API!" });
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
-
+app.use(cookieParser());
 app.use('/api/user', require('./routes/userRoutes'));
 app.use("/api/auth", require("./routes/authRoutes"));
 const PORT = process.env.PORT || 5000;
