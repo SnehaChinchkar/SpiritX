@@ -5,13 +5,12 @@ const blacklist = require("../models/blacklist");
 
 const registerUser = async (req, res) => {
     const { name, email, password, role } = req.body;
-
     try {
         const userExists = await User.findOne({ email });
         if (userExists) return res.status(400).json({ message: "User already exists" });
 
         const user = await User.create({ name, email, password, role });
-
+        // console.log("reached here");
         generateToken(res, user._id, user.role);
 
         res.status(201).json({ message: "User registered successfully", user });
