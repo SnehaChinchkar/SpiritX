@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTheme } from '../../ThemeContext';
 import './Login.css';
 
 function Login() {
@@ -9,6 +10,7 @@ function Login() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [role, setRole] = useState('Student');
   const navigate = useNavigate();
+  const { theme } = useTheme();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,13 +19,9 @@ function Login() {
         alert('Passwords do not match');
         return;
       }
-      console.log('Signing up as:', role, 'with:', username, password);
-      // Simulate successful sign-up and redirect
       alert('Account created! Logging you in...');
       navigate('/home');
     } else {
-      console.log('Logging in as:', role, 'with:', username, password);
-      // Simulate successful login and redirect
       navigate('/home');
     }
   };
@@ -36,7 +34,7 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
+    <div className={`login-container ${theme}`}>
       <div className="logo-container">
         <div className="logo-placeholder"></div>
         <span className="company-name">Company Name</span>

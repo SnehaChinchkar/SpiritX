@@ -1,0 +1,144 @@
+.events-container {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+}
+
+.events-content {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.fc {
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.fc .fc-toolbar {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.fc .fc-button {
+  background-color: var(--input-bg);
+  color: var(--text-secondary);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.fc .fc-button:hover {
+  background-color: var(--text-primary);
+  color: #ffffff;
+}
+
+.fc .fc-daygrid-day {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+}
+
+.fc .fc-daygrid-day:hover {
+  background-color: var(--input-bg);
+}
+
+.fc .fc-daygrid-day-number {
+  color: var(--text-secondary);
+  padding: 5px;
+}
+
+.fc .fc-day-other .fc-daygrid-day-number {
+  color: #999;
+}
+
+.fc .fc-daygrid-event {
+  margin: 2px 0;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.event-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.event-popup {
+  background-color: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  color: var(--text-secondary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-popup h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.event-popup p {
+  margin: 10px 0;
+}
+
+.event-popup a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.event-popup a:hover {
+  text-decoration: underline;
+}
+
+.join-now-btn {
+  background-color: var(--text-primary);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.join-now-btn:hover {
+  background-color: #004182;
+}
+
+.close-btn {
+  background-color: var(--input-bg);
+  color: var(--text-secondary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-btn:hover {
+  background-color: var(--border);
+}

@@ -1,0 +1,93 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-primary);
+}
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-placeholder {
+  width: 50px;
+  height: 50px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.company-name {
+  color: var(--text-secondary);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.login-box {
+  width: 350px;
+  padding: 20px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--text-secondary);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--text-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004182;
+}
+
+.toggle-auth {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.toggle-auth span {
+  color: var(--text-primary);
+  cursor: pointer;
+  text-decoration: underline;
+}
