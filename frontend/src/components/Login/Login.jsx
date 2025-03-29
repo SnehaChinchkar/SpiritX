@@ -5,7 +5,7 @@ import './Login.css';
 
 function Login() {
   const [isSignUp, setIsSignUp] = useState(false);
-  const [name, setName] = useState(''); // ✅ New state for name
+  const [name, setName] = useState(''); 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -26,7 +26,7 @@ function Login() {
         : 'http://localhost:5000/api/auth/login';
       
       const requestData = isSignUp
-        ? { name, email, password, role } // ✅ Include `name` only for sign-up
+        ? { name, email, password, role }
         : { email, password, role };
 
       const { data } = await axios.post(endpoint, requestData, {
@@ -60,7 +60,7 @@ function Login() {
         <form onSubmit={handleSubmit}>
           {isSignUp && (
             <div className="form-group">
-              <label htmlFor="name">Full Name:</label> {/* ✅ New input field */}
+              <label htmlFor="name">Full Name:</label> 
               <input
                 type="text"
                 id="name"
