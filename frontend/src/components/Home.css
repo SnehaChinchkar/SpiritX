@@ -1,0 +1,89 @@
+.home-container {
+    min-height: 100vh;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #444;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .company-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-option {
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+  }
+  
+  .nav-option:hover {
+    color: #007bff;
+  }
+  
+  .nav-icon {
+    font-size: 18px; /* Size of the icons */
+  }
+  
+  .notification-btn {
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .notification-btn:hover {
+    color: #007bff;
+  }
+  
+  .home-content {
+    margin-top: 80px;
+    text-align: center;
+  }
